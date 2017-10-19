@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.orangecoastcollege.cs273.vnguyen468.cs273superheroes.QuizActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/questionNumberTextVuew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/question"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
+
+    <ImageView
+        android:id="@+id/superheroImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/profile_pic"/>
+
+    <TextView
+        android:id="@+id/quizTypeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="makeGuess"
+            android:text="Button"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="makeGuess"
+            android:text="Button"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="makeGuess"
+            android:text="Button"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="makeGuess"
+            android:text="Button"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/answerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="35sp"/>
+
+</LinearLayout>
