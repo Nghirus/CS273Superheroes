@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 
 import edu.orangecoastcollege.cs273.vnguyen468.cs273superheroes.R;
 
+/**
+ * displays the option menu for user to change quiz type
+ */
 public class SettingsActivity extends AppCompatActivity {
 
     @Override

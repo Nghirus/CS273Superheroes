@@ -48,6 +48,11 @@ public class QuizActivity extends AppCompatActivity {
     private TextView mAnswerTextView;
 
     private static final String QUIZ_TYPE ="pref_quiz_type";
+
+    /**
+     * This is called when the app starts up
+     * @param savedInstanceState the current loaded instance
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +93,9 @@ public class QuizActivity extends AppCompatActivity {
         resetQuiz();
     }
 
+    /**
+     * Resets the quiz. Sets everything to 0 and start with the first question. Calls loadNextQuestion()
+     */
     public void resetQuiz()
     {
         mCorrectGuesses = 0;
@@ -179,12 +187,23 @@ public class QuizActivity extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * Infates the option menu
+     * @param menu the menu to be displayed
+     * @return the menu is visible
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_settings, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
+    /**
+     * Check if the options have changed
+     * @param item the option that is changed
+     * @return the item changed, and reload the quiz
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         //Make intent going to settings activity.
@@ -210,6 +229,11 @@ public class QuizActivity extends AppCompatActivity {
         }
     };
 
+    /**
+     * Make a guess, determines if the answer is correct, and changes button accordingly. If quiz is done
+     * dispplay score.
+     * @param v the clicked button/answer
+     */
     public void makeGuess(View v) {
         // TODO: Downcast the View v into a Button (since it's one of the 4 buttons)
         Button clickedButton = (Button) v;
